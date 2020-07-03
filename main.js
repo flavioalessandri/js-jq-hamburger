@@ -24,26 +24,42 @@ console.log("02 script to show the hamburger menu using Show/hide");
 
 
 console.log("03 Compact script to show the hamburger menu using addClass");
-var hidden = false;
-console.log(hidden);
+// var hidden = false;
+// console.log(hidden);
+//
+// $('div.header-right>a,div.hamburger-menu>a').click(function(){
+//   if(hidden == false ){
+//     $('div.hamburger-menu').addClass('active');
+//     hidden = true;
+//     console.log(hidden);
+//   } else {
+//       $('div.hamburger-menu').removeClass('active');
+//       hidden = false;
+//       console.log(hidden);
+//     }
+//   }
+// );
 
-$('div.header-right>a,div.hamburger-menu>a').click(function(){
-  if(hidden == false ){
-    $('div.hamburger-menu').addClass('active');
-    hidden = true;
-    console.log(hidden);
-  } else {
-      $('div.hamburger-menu').removeClass('active');
-      hidden = false;
-      console.log(hidden);
-    }
-  }
-);
+ console.log("04 Compact script using Fade");
+var closeButton = $(".close");
+var button = $("div.header-right> a");
+var hamburgerMenu =$('div.hamburger-menu');
 
-$('div.hamburger-menu > a').mouseenter(function(){
-  $(this).css('color', 'red');
+button.click( function(){
+hamburgerMenu.fadeIn(3000);
 });
 
-$('div.hamburger-menu > a').mouseleave(function(){
-  $(this).css('color', 'white');
+closeButton.click( function(){
+hamburgerMenu.fadeOut(3000);
 });
+
+
+
+
+// $('div.hamburger-menu > a').mouseenter(function(){
+//   $(this).css('color', 'red');
+// });
+//
+// $('div.hamburger-menu > a').mouseleave(function(){
+//   $(this).css('color', 'white');
+// });
